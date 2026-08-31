@@ -1,0 +1,4 @@
+# Shell environment examples; this project does not auto-load .env files.
+IMAGE_API_KEY=replace-me
+IMAGE_API_BASE_URL=https://your-openai-compatible-gateway.example/v1
+IMAGE_MODEL=gpt-image-2

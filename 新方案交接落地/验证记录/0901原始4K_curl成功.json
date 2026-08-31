@@ -1,0 +1,13 @@
+{
+  "record_type": "redacted_production_validation",
+  "request_id": "redacted",
+  "http_status": 200,
+  "elapsed_seconds_bucket": "45-75",
+  "input": "original_4k.jpg",
+  "method": "system_curl_direct_original",
+  "profile": "B",
+  "response_model": "image-edit-model-mapped-name",
+  "has_b64_json": true,
+  "error": null,
+  "privacy_note": "Identifiers, local paths, exact byte counts and billing details were removed for public release."
+}

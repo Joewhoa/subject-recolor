@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: python -m pip install --upgrade pip
+      - run: pip install -e ".[dev]"
+      - name: Check root engineering baseline
+        run: ruff check .
+      - name: Test root engineering baseline
+        run: pytest --cov=subject_recolor --cov-report=term-missing
+      - name: Test field batch delivery
+        working-directory: 新方案交接落地/正式工具_batch_recolor_tool
+        env:
+          PYTHONPATH: .
+        run: python -m unittest -v tests.test_offline tests.test_curl_local_integration
+      - name: Test field one-shot delivery
+        working-directory: 新方案交接落地/一次性换色脚本
+        run: python -m unittest -v test_once_offline

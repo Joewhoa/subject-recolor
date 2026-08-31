@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+dist/
+build/
+*.egg-info/
+
+# Secrets
+.env
+.env.*
+
+# Local tasks and generated assets
+workspace/
+demo-workspace/
+examples/private/
+**/output/
+**/生成图/
+
+# Keep the explicitly licensed public portfolio fixture, but not runtime ledgers/metadata.
+!examples/public-furniture-test/workspace/
+!examples/public-furniture-test/workspace/**
+examples/public-furniture-test/workspace/**/output/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

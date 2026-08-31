@@ -1,0 +1,20 @@
+{
+  "base_url": "https://your-image-gateway.example",
+  "endpoint_path": "/v1/images/edits",
+  "model": "gpt-image-2",
+  "subject": "户外窗帘",
+  "profile": "B",
+  "upload_max_dimension": 2048,
+  "upload_max_bytes": 4194304,
+  "upload_jpeg_quality": 90,
+  "connect_timeout": 20,
+  "read_timeout": 300,
+  "write_timeout": 120,
+  "pool_timeout": 20,
+  "max_safe_retries": 1,
+  "retry_delay_seconds": 30,
+  "pause_between_tasks": 2,
+  "context_workers": 1,
+  "save_every": 5,
+  "jpg_quality": 85
+}

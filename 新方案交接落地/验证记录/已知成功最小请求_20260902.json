@@ -1,0 +1,12 @@
+{
+  "record_type": "redacted_production_validation",
+  "request_id": "redacted",
+  "http_status": 200,
+  "elapsed_seconds_bucket": "60-90",
+  "method": "system_curl_minimal_contract",
+  "profile": "A",
+  "response_model": "image-edit-model-mapped-name",
+  "has_b64_json": true,
+  "error": null,
+  "privacy_note": "Identifiers, exact response size and billing details were removed for public release."
+}

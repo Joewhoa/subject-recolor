@@ -1,0 +1,28 @@
+{
+  "dataset": "public-furniture-smoke-test-v1",
+  "checked_at": "2026-08-31",
+  "sources": [
+    {
+      "local_file": "workspace/2026-09-03/input/kubus_sofa.jpg",
+      "title": "Kubus sofa",
+      "creator": "Wikidapit",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Kubus_sofa.jpg",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Kubus_sofa.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "sha256": "8d6a1cdae00b83d753e39369fd1d7a012418c6878c0a217ebb12360851fd6693",
+      "attribution": "“Kubus sofa” by Wikidapit, CC BY-SA 3.0, via Wikimedia Commons. Modified by Subject Recolor."
+    },
+    {
+      "local_file": "workspace/2026-09-03/input/wooden_couch.jpg",
+      "title": "Couch Furniture",
+      "creator": "RanjithSiji",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Couch_Furniture.JPG",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Couch_Furniture.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "sha256": "acf59cc7ac96c2cd5622ed2ae1effe18261af28ab41684b3f0dc90856068ecc9",
+      "attribution": "“Couch Furniture” by RanjithSiji, CC BY-SA 3.0, via Wikimedia Commons. Modified by Subject Recolor."
+    }
+  ]
+}

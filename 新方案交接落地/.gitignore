@@ -1,0 +1,28 @@
+# Python environments and caches
+.venv/
+**/.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local configuration and credentials
+config.json
+.env
+.env.*
+
+# Runtime output
+生成图/
+结果/
+**/生成图/
+**/结果/
+
+# Packaging and OS metadata
+dist/
+build/
+*.egg-info/
+__MACOSX/
+.DS_Store
+Thumbs.db
