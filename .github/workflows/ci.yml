@@ -22,10 +22,10 @@ jobs:
       - name: Test root engineering baseline
         run: pytest --cov=subject_recolor --cov-report=term-missing
       - name: Test field batch delivery
-        working-directory: 新方案交接落地/正式工具_batch_recolor_tool
+        working-directory: delivery/batch-tool
         env:
           PYTHONPATH: .
         run: python -m unittest -v tests.test_offline tests.test_curl_local_integration
       - name: Test field one-shot delivery
-        working-directory: 新方案交接落地/一次性换色脚本
+        working-directory: delivery/one-shot
         run: python -m unittest -v test_once_offline

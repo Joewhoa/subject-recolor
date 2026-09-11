@@ -6,7 +6,7 @@
 - Expected repository: `subject-recolor`
 - Do not publish or create a repository until the human owner explicitly asks.
 - The repository root is the earlier reusable engineering baseline.
-- `新方案交接落地/` is the later field-delivery version created because non-technical users could not operate the engineering CLI reliably.
+- `delivery/` is the later field-delivery version created because non-technical users could not operate the engineering CLI reliably.
 
 ## Portfolio narrative
 
@@ -44,7 +44,6 @@ Do not describe the two versions as competing implementations. The field-deliver
 - Added one-shot attempt sidecars for submitted/uncertain/rejected/succeeded tracking.
 - Added batch strict metadata cache with task ID and PNG/JPG SHA-256 checks.
 - Added duplicate normalized-stem rejection.
-- Rebuilt `文件清单.txt` and `SHA256SUMS.txt`.
 
 ## Verification before publication
 
@@ -58,20 +57,19 @@ python -m ruff check .
 Run field-delivery tests:
 
 ```powershell
-cd 新方案交接落地/正式工具_batch_recolor_tool
+cd delivery/batch-tool
 $env:PYTHONPATH='.'
 python -m unittest -v tests.test_offline tests.test_curl_local_integration
 
-cd ../一次性换色脚本
+cd ../one-shot
 python -m unittest -v test_once_offline
 ```
 
 Verify release hygiene and checksums without executing a paid request:
 
 ```powershell
-cd 新方案交接落地
-python 正式工具_batch_recolor_tool/check_environment.py
-# Verify every SHA256SUMS.txt entry with Get-FileHash.
+cd delivery
+python batch-tool/check_environment.py
 # Search for private endpoints, keys, Bearer values and unredacted UUIDs.
 # Inspect `git status --short --ignored` and `git add -nA` before commit.
 ```

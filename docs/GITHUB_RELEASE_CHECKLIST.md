@@ -22,12 +22,12 @@ python -m pip install -e ".[dev]"
 python -m ruff check .
 python -m pytest --cov=subject_recolor --cov-report=term-missing
 
-Push-Location "新方案交接落地/正式工具_batch_recolor_tool"
+Push-Location "delivery/batch-tool"
 $env:PYTHONPATH = "."
 python -m unittest -v tests.test_offline tests.test_curl_local_integration
 Pop-Location
 
-Push-Location "新方案交接落地/一次性换色脚本"
+Push-Location "delivery/one-shot"
 python -m unittest -v test_once_offline
 Pop-Location
 
@@ -100,4 +100,4 @@ These are owner-side tasks, not remotely verified facts:
 
 - The real portfolio test covers one clean, single-sofa image. The more difficult multi-sofa showroom case has not been established by the published evidence.
 - The workflow uses semantic editing without a mask; pixel-perfect background invariance is not guaranteed.
-- The root repository is the earlier reproducible engineering baseline. `新方案交接落地` is its later production-delivery evolution for a non-technical user, not a competing duplicate project.
+- The root repository is the earlier reproducible engineering baseline. `delivery` is its later production-delivery evolution for a non-technical user, not a competing duplicate project.

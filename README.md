@@ -13,7 +13,7 @@
 仓库是同一项目的两段演进而非两个竞争项目：
 
 - **根目录**：较早的可复现工程基线。CLI 覆盖 `doctor → plan → 确认 → run → review`，人可直接运行，也可作为 DSH 对话智能体的后端。
-- **[`新方案交接落地`](新方案交接落地/00_README_先看这里.md)**：后续生产交付版本。直接原因是真实非技术用户无法独立操作 CLI，因此增加了 Agent 代操作、小白手册、一次性单图单色入口和可断点恢复的批量入口。
+- **[`delivery`](delivery/README.md)**：后续生产交付版本。直接原因是真实非技术用户无法独立操作 CLI，因此增加了 Agent 代操作、小白手册、一次性单图单色入口和可断点恢复的批量入口。
 
 ```mermaid
 flowchart LR
@@ -30,7 +30,7 @@ flowchart LR
 ## 项目亮点
 
 - **主体可配置**：主体保存在 `job.toml`，CLI仍可临时覆盖。
-- **明确的版本边界**：根目录是较早的可复现工程基线；`新方案交接落地` 是在真实非技术用户无法独立操作 CLI 后形成的生产交付演进，不是重复项目。
+- **明确的版本边界**：根目录是较早的可复现工程基线；`delivery` 是在真实非技术用户无法独立操作 CLI 后形成的生产交付演进，不是重复项目。
 - **内容寻址缓存**：只有 metadata 的 `task_id` 和 PNG/JPG 哈希全部匹配才会跳过。
 - **付费调用对账**：`--expect-calls N` 防止智能体或用户基于过期计划扩大批次。
 - **保守失败语义**：根目录基线对超时/断线等未知结果停止批次；后续生产版进一步将其固化为付费调用安全状态机。
@@ -227,12 +227,12 @@ python -m pytest --cov=subject_recolor
 生产交付版的现场回归测试须从各自目录运行：
 
 ```powershell
-Push-Location "新方案交接落地/正式工具_batch_recolor_tool"
+Push-Location "delivery/batch-tool"
 $env:PYTHONPATH = "."
 python -m unittest -v tests.test_offline tests.test_curl_local_integration
 Pop-Location
 
-Push-Location "新方案交接落地/一次性换色脚本"
+Push-Location "delivery/one-shot"
 python -m unittest -v test_once_offline
 Pop-Location
 ```

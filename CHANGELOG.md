@@ -2,7 +2,7 @@
 
 ## Unreleased — production-delivery evolution
 
-- Clarified that the repository root is the earlier reproducible engineering baseline and `新方案交接落地` is the later production-delivery version of the same project, not a competing duplicate.
+- Clarified that the repository root is the earlier reproducible engineering baseline and `delivery` is the later production-delivery version of the same project, not a competing duplicate.
 - Recorded the direct product cause for the evolution: a genuinely non-technical user could not operate the CLI independently.
 - Added an Agent-operated workflow, beginner manual and one-shot single-image/single-color entry.
 - Added resumable batch operation, a paid-call safety state machine, strict cache reuse and human review.

@@ -6,7 +6,7 @@ Built an earlier reproducible engineering baseline for subject recoloring, then 
 
 ## Evolution, not duplication
 
-The repository root is the earlier reproducible engineering baseline: deterministic N×M planning, guarded paid calls, artifact production, strict cache validation and human review. `新方案交接落地` is the later production-delivery version of the same project, not a competing duplicate project.
+The repository root is the earlier reproducible engineering baseline: deterministic N×M planning, guarded paid calls, artifact production, strict cache validation and human review. `delivery` is the later production-delivery version of the same project, not a competing duplicate project.
 
 That later version was caused directly by observed usability failure: a genuinely non-technical user could not independently operate the CLI. The production-delivery evolution therefore adds:
 

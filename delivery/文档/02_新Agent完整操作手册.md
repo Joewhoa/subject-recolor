@@ -6,7 +6,7 @@
 
 ## 1. 不可违反的生产规则
 
-1. 唯一主入口：`正式工具_batch_recolor_tool/main.py`。
+1. 唯一主入口：`batch-tool/main.py`。
 2. Python负责任务管理；system curl作为该部署的验证适配器负责multipart传输。不要恢复httpx作为默认，也不要把httpx与curl的差异描述成“httpx必然失败”。
 3. 当前稳定版固定单线程`context_workers=1`；README不得宣称已实现并发。
 4. 默认`profile=B`；A只能由用户明确指定到个别复检任务，绝不A+B双跑；A/B输出必须隔离。
@@ -21,7 +21,7 @@
 
 ## 2. 第一次接手清单
 
-1. 阅读交接根目录`00_README_先看这里.md`；
+1. 阅读交接根目录`README.md`；
 2. 确认工作目录，不要从工具安装路径推断项目路径；
 3. 检查目标日期目录是否有`待处理/`、`色卡/`；
 4. 检查交接包是否完整；
@@ -42,7 +42,7 @@
 优先让Agent执行：
 
 ```bash
-cd ".../新方案交接落地/正式工具_batch_recolor_tool"
+cd ".../delivery/batch-tool"
 python3 -m venv .venv
 .venv/bin/python -m pip install --upgrade pip
 .venv/bin/python -m pip install -r requirements.txt
@@ -57,7 +57,7 @@ PYTHONPATH=. .venv/bin/python -m unittest -v tests.test_offline
 可双击`install_windows.bat`，或：
 
 ```powershell
-cd "...\新方案交接落地\正式工具_batch_recolor_tool"
+cd "...\delivery\batch-tool"
 py -3 -m venv .venv
 .venv\Scripts\python.exe -m pip install -r requirements.txt
 .venv\Scripts\python.exe check_environment.py
@@ -72,7 +72,7 @@ Python建议3.10–3.13。依赖只有Pillow；curl由系统提供。不要在�
 变量：
 
 ```bash
-TOOL="/绝对路径/新方案交接落地/正式工具_batch_recolor_tool"
+TOOL="/绝对路径/delivery/batch-tool"
 TASK="/绝对路径/0915"
 PY="$TOOL/.venv/bin/python"
 ```

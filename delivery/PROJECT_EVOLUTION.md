@@ -16,7 +16,7 @@ The repository root is the earlier engineering version. It established the reusa
 
 This phase proved the workflow and made it suitable for engineering review and portfolio reproduction.
 
-### Phase 2: field delivery (`新方案交接落地`)
+### Phase 2: field delivery (`delivery`)
 
 The later production-delivery version was created after real users had difficulty operating the engineering CLI. The requirement changed from “provide a correct tool” to “let a non-technical user complete work safely with an Agent acting as the operator.”
 
