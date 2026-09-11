@@ -235,7 +235,7 @@ Pop-Location
 
 ## 隐私
 
-- 不提交真实API Key、客户图片或完整Base64响应；
+- 不提交真实 API Key、真实私有图片、完整 Base64 响应或真实 request ID；
 - `.gitignore`排除工作区、输出和本地缓存；
 - 公开效果图前确认图片版权、人物隐私和网关条款。
 
