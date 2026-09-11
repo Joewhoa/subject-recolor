@@ -1,6 +1,14 @@
 # Subject Recolor
 
-按色卡给任意指定主体（窗帘、沙发、雨伞、帐篷等）批量换色的生成式图片生产流水线：把原图 × 色卡展开为笛卡尔积，经 OpenAI 兼容的图片编辑接口产出结果，内置付费调用安全、严格缓存、断点恢复与人工复核。
+> Agent-operated generative image workflow for recoloring user-selected subjects from color cards, with paid-call safeguards, resumable execution, strict caching, and human review.
+>
+> 面向商品图片生产的 Agent 驱动批量换色工作流：按色卡对用户指定主体进行语义换色，并通过调用预检、费用上限、严格缓存、断点恢复和人工复核控制生成式模型的不确定性。
+
+[![CI](https://github.com/Joewhoa/subject-recolor/actions/workflows/ci.yml/badge.svg)](https://github.com/Joewhoa/subject-recolor/actions/workflows/ci.yml) [![Python 3.11 | 3.12 | 3.13](https://img.shields.io/badge/python-3.11%20%7C%203.12%20%7C%203.13-3776AB.svg)](https://github.com/Joewhoa/subject-recolor/actions/workflows/ci.yml) [![Coverage: 83%](https://img.shields.io/badge/coverage-83%25-informational.svg)](docs/evidence/offline-demo-run-report.json) [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
+**Evidence:** `34 passed` · `83%` coverage (762 statements / 130 miss) · CI on Python `3.11`, `3.12`, `3.13` · [redacted plan JSON](docs/evidence/offline-demo-plan.json) · [redacted run report](docs/evidence/offline-demo-run-report.json)
+
+真实需求是按多张色卡批量制作商品配色图，而非教程项目。第一版 CLI 技术可运行，但真实非技术用户不会独立操作命令行，因此演进为 Agent Skill + 确定性 CLI + 人工审批的交付流程：Agent 理解请求、预检、汇报调用数并编排执行；CLI 保证付费调用与产物约束；模型只负责图片编辑。
 
 仓库是同一项目的两段演进而非两个竞争项目：
 
