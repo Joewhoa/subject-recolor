@@ -1,0 +1,26 @@
+{
+  "source_command": "subject-recolor demo --workspace demo-workspace",
+  "created_at": "2026-08-31T17:17:47.776004+00:00",
+  "halted": false,
+  "plan": {
+    "tasks": 2,
+    "complete": 0,
+    "repair_jpg": 0,
+    "new_calls": 2,
+    "expected_png": 2,
+    "expected_jpg": 2
+  },
+  "final_state": {
+    "tasks": 2,
+    "complete": 2,
+    "repair_jpg": 0,
+    "new_calls": 0,
+    "expected_png": 2,
+    "expected_jpg": 2
+  },
+  "results": [
+    {"status": "succeeded", "source_size": [512, 512], "generated_size": [512, 512]},
+    {"status": "succeeded", "source_size": [512, 512], "generated_size": [512, 512]}
+  ],
+  "note": "Redacted excerpt from the checked-in deterministic offline demo output; task IDs, request IDs, paths, and full response details are omitted."
+}
