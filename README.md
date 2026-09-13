@@ -4,7 +4,7 @@
 >
 > 面向商品图片生产的 Agent 驱动批量换色工作流：按色卡对用户指定主体进行语义换色，并通过调用预检、费用上限、严格缓存、断点恢复和人工复核控制生成式模型的不确定性。
 
-[![CI](https://github.com/Joewhoa/subject-recolor/actions/workflows/ci.yml/badge.svg)](https://github.com/Joewhoa/subject-recolor/actions/workflows/ci.yml) [![Python 3.11 | 3.12 | 3.13](https://img.shields.io/badge/python-3.11%20%7C%203.12%20%7C%203.13-3776AB.svg)](https://github.com/Joewhoa/subject-recolor/actions/workflows/ci.yml) [![Coverage: 83%](https://img.shields.io/badge/coverage-83%25-informational.svg)](docs/evidence/offline-demo-run-report.json) [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![CI](https://github.com/Joewhoa/subject-recolor/actions/workflows/ci.yml/badge.svg)](https://github.com/Joewhoa/subject-recolor/actions/workflows/ci.yml) [![Python 3.11 | 3.12 | 3.13](https://img.shields.io/badge/python-3.11%20%7C%203.12%20%7C%203.13-3776AB.svg)](https://github.com/Joewhoa/subject-recolor/actions/workflows/ci.yml) [![Coverage: 83%](https://img.shields.io/badge/coverage-83%25-informational.svg)](https://github.com/Joewhoa/subject-recolor/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 **Evidence:** `34 passed` · `83%` coverage (762 statements / 130 miss) · CI on Python `3.11`, `3.12`, `3.13` · [redacted plan JSON](docs/evidence/offline-demo-plan.json) · [redacted run report](docs/evidence/offline-demo-run-report.json)
 
