@@ -1,0 +1,49 @@
+# 这是「第二道防线」：Dockerfile 用的是白名单拷贝，本文件主要防「有人改回 COPY . .」时漏东西。
+# 与 .gitignore 对齐——凡是不该进 Git 的，同样不该进镜像。
+
+# 密钥类（绝不允许进镜像）
+.env
+.env.*
+environment.example
+
+# 版本控制与 CI
+.git
+.gitignore
+.github
+
+# 非运行必需：文档 / 示例 / 智能体手册 / 生产交付版
+docs/
+examples/
+skills/
+delivery/
+
+# 测试
+tests/
+
+# 本地工作区与生成产物（运行时数据）
+workspace/
+demo-workspace/
+**/output/
+**/生成图/
+
+# Python 缓存与虚拟环境
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+dist/
+build/
+*.egg-info/
+
+# OS / 编辑器
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# 容器自身文件
+Dockerfile
+.dockerignore

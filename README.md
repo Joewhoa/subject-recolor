@@ -73,6 +73,25 @@ subject-recolor demo --workspace demo-workspace
 demo-workspace/2026-01-15/output/review.html
 ```
 
+## 用容器运行（Docker）
+
+不想在本机配 Python 环境？直接用容器，**结果完全一样**：
+
+```bash
+docker build -t subject-recolor:0.1.0 .
+docker run --rm -v "$PWD/demo-workspace:/app/workspace" subject-recolor:0.1.0 demo
+# Windows / PowerShell 的等价写法见 DOCKER.md
+```
+
+镜像里已经打包好 Python 3.11 和全部运行依赖，**本机不需要装任何东西**。
+构建、验证、排错和「为什么这么写」的完整说明见 [`DOCKER.md`](DOCKER.md)。
+
+Dockerfile 里两个值得注意的取舍：
+
+- **依赖分两段装**：改代码时「装依赖」那一层整层复用，重建从 ~67 秒降到 **~8 秒**。
+- **白名单拷贝**：只 `COPY` 必需的三个路径，不写 `COPY . .`——
+  避免把工作区、密钥、文档意外打进镜像层（镜像层里的东西**删不掉**）。
+
 ## 创建真实任务
 
 ```bash
